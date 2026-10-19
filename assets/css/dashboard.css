@@ -1,0 +1,50 @@
+.stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:20px}.stat-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px}.stat-card span{display:block;color:#6b7280;font-size:13px;margin-bottom:8px}.stat-card strong{font-size:30px}@media(max-width:700px){.stat-grid{grid-template-columns:1fr 1fr}}@media(max-width:460px){.stat-grid{grid-template-columns:1fr}}
+
+
+/* Rekap pembayaran bulanan */
+.recap-actions{display:flex;gap:10px;flex-wrap:wrap}
+.recap-filter{padding:16px 20px}
+.year-filter{display:flex;align-items:end;gap:12px;flex-wrap:wrap}
+.year-filter label{display:block;font-weight:600;margin-bottom:6px}
+.year-filter select{min-width:150px;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;background:#fff;font:inherit}
+.recap-stat-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.recap-stat-grid .stat-card{min-width:0}
+.recap-stat-grid .stat-card strong{display:block;font-size:clamp(20px,2vw,30px);overflow-wrap:anywhere}
+.recap-stat-grid .stat-card small{display:block;margin-top:8px;color:#6b7280;line-height:1.5}
+.recap-income{border-top:3px solid #16a34a}
+.recap-section-title{display:flex;align-items:start;justify-content:space-between;gap:12px;margin-bottom:18px}
+.recap-section-title h2{font-size:20px;margin:0 0 5px}
+.recap-section-title p{margin:0}
+.monthly-bars{height:240px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:10px;align-items:stretch;border-bottom:1px solid #e5e7eb;padding-top:10px}
+.monthly-bar-item{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.monthly-bar-item strong{font-size:10px;font-weight:500;white-space:nowrap;writing-mode:vertical-rl;transform:rotate(180deg);color:#4b5563;max-height:70px;overflow:hidden}
+.monthly-bar-track{height:130px;width:min(100%,32px);background:#f3f4f6;border-radius:7px 7px 0 0;display:flex;align-items:flex-end;overflow:hidden}
+.monthly-bar-fill{width:100%;min-height:3px;background:linear-gradient(180deg,#60a5fa,#2563eb);border-radius:6px 6px 0 0}
+.monthly-bar-item>span{font-size:12px;color:#4b5563}
+.recap-table{min-width:850px}
+.recap-table tfoot th{background:#eef2ff;font-weight:700}
+.money-cell{white-space:nowrap}
+.status-pill{display:inline-block;min-width:28px;text-align:center;padding:3px 7px;border-radius:999px;font-size:12px}
+.status-lunas{background:#dcfce7;color:#166534}
+.status-pending{background:#fef3c7;color:#92400e}
+.status-gagal{background:#fee2e2;color:#991b1b}
+.empty-state{text-align:center;color:#6b7280;padding:28px}
+.recap-date-warning{margin-top:16px}
+.recap-footnote{font-size:12px;margin-top:12px}
+@media(max-width:1000px){.recap-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.monthly-bars{gap:5px}.monthly-bar-track{width:min(100%,24px)}}
+@media(max-width:620px){.recap-actions{width:100%}.recap-actions .btn{flex:1;text-align:center}.monthly-bars{height:190px;gap:3px}.monthly-bar-track{height:95px;width:16px}.monthly-bar-item strong{font-size:9px}.monthly-bar-item>span{font-size:10px}.recap-stat-grid{grid-template-columns:1fr}}
+@media print{
+    body{background:#fff!important;color:#000!important;font-size:10pt}
+    .topbar,.sidebar,.no-print,.recap-actions{display:none!important}
+    .app-shell{display:block;min-height:0}
+    .content{padding:0!important;overflow:visible}
+    .card,.stat-card{box-shadow:none!important;border:1px solid #ddd!important;break-inside:avoid;padding:12px!important}
+    .recap-stat-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+    .recap-stat-grid .stat-card strong{font-size:16pt}
+    .monthly-bars{height:170px}
+    .monthly-bar-track{height:90px}
+    .recap-table{min-width:0;font-size:8pt}
+    .recap-table th,.recap-table td{padding:6px 4px}
+    .recap-table-card{overflow:visible}
+    .recap-footnote{margin-top:8px}
+}
